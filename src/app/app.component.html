@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="title">
+<!-- <input type="text" [(ngModel)]="title">
 <h1> {{ title }} </h1>
 
 <div *ngIf="title === 'Janet'">
@@ -27,11 +27,11 @@
   <li *ngFor="let name of items; index as i"> {{ name }} {{ i }} 
     <button (click)="deleteItem(i)">Delete</button>
   </li>
-</ul>
+</ul> -->
 
-<div *ngFor="let product of products">
-  <span> {{ product.id }} </span>
-  <h1> {{ product.name }} </h1>
-  <h4> {{ product.price }} </h4>
-  <img [src]="product.image" [alt]="product.name">
+<div class="product-grid">
+  <app-product *ngFor="let product of products"
+  (productClicked)="clickProduct($event)"
+  [product]="product">
+</app-product>
 </div>

@@ -1,0 +1,5 @@
+<span> {{ product.id }} </span>
+<h1> {{ product.name }} </h1>
+<strong> {{ product.price }} </strong>
+<img [src]="product.image" [alt]="product.name">
+<button (click)="addCart()">Agregar al carrito</button>

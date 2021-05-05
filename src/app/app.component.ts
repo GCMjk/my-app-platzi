@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -9,57 +8,63 @@ import { Product } from './product.model';
 export class AppComponent {
   title = 'my-app-platzi';
 
-  items = ['Martin', 'Janet', 'Nombres'];
+  // items = ['Martin', 'Janet', 'Nombres'];
 
-  products: Product[] = [
+  products = [
     {
       id: '1',
-      name: 'Prenda',
-      image: 'assets/images/camiseta.png',
-      price: 2000,
-      description: 'Descripcion del producto'
+      name: 'Producto uno',
+      price: 400,
+      description: 'Producto uno de app',
+      image: '../assets/images/camiseta.png'
     },
     {
       id: '2',
-      name: 'Prenda',
-      image: 'assets/images/hoodie.png',
-      price: 2100,
-      description: 'Descripcion del producto'
-    },
-    {
-      id: '2',
-      name: 'Prenda',
-      image: 'assets/images/mug.png',
-      price: 2200,
-      description: 'Descripcion del producto'
+      name: 'Producto dos',
+      price: 500,
+      description: 'Producto dos de app',
+      image: '../assets/images/hoodie.png'
     },
     {
       id: '3',
-      name: 'Prenda',
-      image: 'assets/images/pin.png',
-      price: 2300,
-      description: 'Descripcion del producto'
+      name: 'Producto tres',
+      price: 400,
+      description: 'Producto tres de app',
+      image: '../assets/images/mug.png'
     },
     {
       id: '4',
-      name: 'Prenda',
-      image: 'assets/images/stickers1.png',
-      price: 2400,
-      description: 'Descripcion del producto'
-    },{
-      id: '5',
-      name: 'Prenda',
-      image: 'assets/images/stickers2.png',
-      price: 2500,
-      description: 'Descripcion del producto'
+      name: 'Producto cuatro',
+      price: 500,
+      description: 'Producto cuatro de app',
+      image: '../assets/images/pin.png'
     },
-  ];
+    {
+      id: '5',
+      name: 'Producto cinco',
+      price: 500,
+      description: 'Producto cinco de app',
+      image: '../assets/images/stickers1.png'
+    },
+    {
+      id: '6',
+      name: 'Producto seis',
+      price: 500,
+      description: 'Producto seis de app',
+      image: '../assets/images/stickers2.png'
+    }
+  ]
 
-  addItem() {
+  /* addItem() {
     this.items.push('nuevo item');
   }
 
   deleteItem(index: number){
     this.items.splice(index, 1);
+  } */
+
+  clickProduct(id: number){
+    console.log('product');
+    console.log(id);
   }
 }
